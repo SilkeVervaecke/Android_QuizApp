@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="welcome_text">Welkom in de app</string>
+    <string name="start_text">klik hier om te starten</string>
+
+</resources>

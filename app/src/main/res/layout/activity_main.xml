@@ -13,11 +13,11 @@
         android:layout_height="match_parent"
         android:text="MainActivity"
         android:textAlignment="textEnd"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragmentContainer"

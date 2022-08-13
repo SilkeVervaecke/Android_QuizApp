@@ -33,9 +33,10 @@ class MainActivity : AppCompatActivity(){
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        replaceFragment(HomeFragment())
         setupActionBarWithNavController(findNavController(R.id.fragmentContainer))
-        var data = getQuestData()
+//        replaceFragment(HomeFragment())
+
+//        var data = getQuestData()
 //        binding.btnStart.setOnClickListener {
 //            startActivity(Intent(this, QuestionActivity::class.java)
 //                .putExtra("number", 20))

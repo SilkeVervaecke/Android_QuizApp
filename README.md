@@ -1,7 +1,7 @@
 # Android_QuizApp
 Android Development Opdracht
 
-ik gebruik minAPI 21 ipv 16 
+ik gebruik minSdk 21 ipv 16 
 
 ## links gebruikt:
 - https://www.youtube.com/watch?v=5gFrXGbQsc8

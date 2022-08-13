@@ -1,12 +1,57 @@
 package ehb.sv
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import ehb.sv.classes.QuestItem
+import ehb.sv.classes.Questn
+import ehb.sv.classes.QuestnItem
+import ehb.sv.data.ApiInterface
+import ehb.sv.databinding.ActivityMainBinding
+import ehb.sv.fragments.HomeFragment
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import java.lang.StringBuilder
+import ehb.sv.data.getQuestData
 
-class MainActivity : AppCompatActivity() {
+//const val BASE_URL = "https://www.opentdb.com/"
+const val BASE_URL = " https://the-trivia-api.com/api/"
+
+class MainActivity : AppCompatActivity(){
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+        setContentView(binding.root)
 
+        replaceFragment(HomeFragment())
+        setupActionBarWithNavController(findNavController(R.id.fragmentContainer))
+        var data = getQuestData()
+//        binding.btnStart.setOnClickListener {
+//            startActivity(Intent(this, QuestionActivity::class.java)
+//                .putExtra("number", 20))
+//        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val fragManager = supportFragmentManager
+        val fragTransaction = fragManager.beginTransaction()
+        fragTransaction.replace(R.id.fragmentContainer, fragment)
+        fragTransaction.commit()
+
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.fragmentContainer)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

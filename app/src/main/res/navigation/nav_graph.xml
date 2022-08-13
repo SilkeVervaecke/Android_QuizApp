@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:context=".MainActivity"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/nav_test"
+        android:name="ehb.sv.fragments.testFragment"
+        android:label="test"
+        tools:layout="@layout/fragment_test" />
+
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/nav_host_fragment"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--        app:defaultNavHost="true"-->
+<!--        app:navGraph="@navigation/nav_graph" />-->
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ehb.sv.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_nav_test"
+            app:destination="@id/nav_test" />
+        <action
+            android:id="@+id/action_homeFragment_to_questionActivity"
+            app:destination="@id/questionActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/questionActivity"
+        android:name="ehb.sv.QuestionActivity"
+        android:label="activity_question"
+        tools:layout="@layout/activity_question" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ehb.sv.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="ehb.sv.fragments.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_self"
+            app:destination="@id/questionFragment" />
+    </fragment>
+
+</navigation>

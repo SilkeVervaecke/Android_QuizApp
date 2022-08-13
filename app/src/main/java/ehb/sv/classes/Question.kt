@@ -1,6 +1,6 @@
 package ehb.sv.classes
 
-class QuestAndAnswer (val question: String){
+data class QuestAndAnswer (val question: String){
 
 }
 

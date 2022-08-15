@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestionFalseFragment"
+    tools:context=".fragments.QuestionFalseFragment"
     android:background="@color/red_wrong">
     <TextView
         android:id="@+id/questionnumb"

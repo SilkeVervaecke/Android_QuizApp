@@ -6,14 +6,8 @@
     tools:context=".MainActivity"
     app:startDestination="@id/homeFragment">
 
-    <fragment
-        android:id="@+id/nav_test"
-        android:name="ehb.sv.fragments.testFragment"
-        android:label="Test"
-        tools:layout="@layout/fragment_test" />
 
-
-<!--    <androidx.fragment.app.FragmentContainerView-->
+    <!--    <androidx.fragment.app.FragmentContainerView-->
 <!--        android:id="@+id/nav_host_fragment"-->
 <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
 <!--        android:layout_width="0dp"-->
@@ -31,9 +25,6 @@
         android:name="ehb.sv.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_nav_test"
-            app:destination="@id/nav_test" />
         <action
             android:id="@+id/action_homeFragment_to_questionFragment"
             app:destination="@id/questionFragment" >
@@ -81,7 +72,7 @@
     </fragment>
     <fragment
         android:id="@+id/questionCorrectFragment"
-        android:name="ehb.sv.QuestionCorrectFragment"
+        android:name="ehb.sv.fragments.QuestionCorrectFragment"
         android:label="fragment_question_correct"
         tools:layout="@layout/fragment_question_correct" >
         <action
@@ -101,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/questionFalseFragment"
-        android:name="ehb.sv.QuestionFalseFragment"
+        android:name="ehb.sv.fragments.QuestionFalseFragment"
         android:label="fragment_question_false"
         tools:layout="@layout/fragment_question_false" >
         <action

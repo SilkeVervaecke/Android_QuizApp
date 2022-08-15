@@ -96,18 +96,16 @@ suspend fun getQuestData_suspend(): List<QuestnItem> {
     }
 }
 
-@OptIn(DelicateCoroutinesApi::class)
-fun getQuestions_a() = GlobalScope.async {
-    return@async getQuestData()
-}
-
-
-
-@OptIn(DelicateCoroutinesApi::class)
-suspend fun getQuestions_b() =
-    withContext(Dispatchers.Default) {
-        return@withContext getQuestData()
-    }
+//@OptIn(DelicateCoroutinesApi::class)
+//fun getQuestions_a() = GlobalScope.async {
+//    return@async getQuestData()
+//}
+//
+//@OptIn(DelicateCoroutinesApi::class)
+//suspend fun getQuestions_b() =
+//    withContext(Dispatchers.Default) {
+//        return@withContext getQuestData()
+// }
 
 //var baseurl ="https://opentdb.com/"
 

@@ -19,5 +19,8 @@
     <string name="attachment_title">Download inkomende bijlages</string>
     <string name="attachment_summary_off">Enkel bijlages downloaden wanneer handmatig aangevraagd</string>
     <string name="attachment_summary_on">Automatisch bijlages downloaden</string>
+    <string name="correct">Juist</string>
+    <string name="next_question">Volgende Vraag</string>
+    <string name="wrong">Fout</string>
 
 </resources>

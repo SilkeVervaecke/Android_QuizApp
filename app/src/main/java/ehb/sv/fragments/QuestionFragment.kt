@@ -6,14 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import ehb.sv.MainActivity
-import ehb.sv.R
 import ehb.sv.classes.QuestnItem
 import ehb.sv.data.QuestRetriever
-import ehb.sv.data.getQuestData_suspend
 import ehb.sv.databinding.FragmentQuestionBinding
 import kotlinx.coroutines.*
 import retrofit2.Call
@@ -34,7 +30,19 @@ class QuestionFragment : Fragment() {
     ): View? {
         binding = FragmentQuestionBinding.inflate(inflater, container, false)
         val data = args.question
-
+        val number = args.questNumber
+        println(args.question)
+        for (qu in args.question){
+            println(qu)
+        }
+        println("** end **")
+        if(data.size>0 && number<10){
+            println("data groter dan 10")
+            bind(data, number)
+        }
+        else{
+            fetchQuestions()
+        }
 //        println(data.size.toString() + " data " + data)
 //        if (data.isEmpty()) {
 //            binding.textQuestion.text = getString(R.string.question)
@@ -55,14 +63,7 @@ class QuestionFragment : Fragment() {
 //        }
 // /       datajob()
 
-        val number = args.questNumber
-        println("the number of the day")
-        println(number)
-        println(args.question)
-        for (qu in args.question){
-            println(qu)
-        }
-        println("** end **")
+
 
 
         return binding.root
@@ -98,14 +99,32 @@ class QuestionFragment : Fragment() {
 //
 //    }
 
-    fun bind(data: List<QuestnItem>){
+    fun bind(data: Array<QuestnItem>, number: Int = 0){
         println(" -- we are binding -- ")
-        var quest = data[0]
+
+        var quest = data[number]
         binding.textQuestion.text = quest.question
         binding.answ1.text = quest.correctAnswer
         binding.answ2.text = quest.incorrectAnswers[0]
         binding.answ3.text = quest.incorrectAnswers[1]
         binding.answ4.text = quest.incorrectAnswers[2]
+        binding.answ1
+        binding.answ1.setOnClickListener{
+            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionCorrectFragment(data, number)
+            findNavController().navigate(action)
+        }
+        binding.answ2.setOnClickListener{
+            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data,number )
+            findNavController().navigate(action)
+        }
+        binding.answ3.setOnClickListener{
+            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data, number)
+            findNavController().navigate(action)
+        }
+        binding.answ4.setOnClickListener{
+            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data, number)
+            findNavController().navigate(action)
+        }
     }
 
     private fun fetchQuestions() {
@@ -127,7 +146,7 @@ class QuestionFragment : Fragment() {
                 ) {
                     println(response)
                     val responseBody = response.body()!!
-                    bind(responseBody)
+                    bind(responseBody.toTypedArray(), 0)
                 }
 
                 override fun onFailure(call: Call<List<QuestnItem>?>, t: Throwable) {
@@ -139,7 +158,6 @@ class QuestionFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        fetchQuestions()
 
 //        for (answ in question.incorrectAnswers){
 //            binding.

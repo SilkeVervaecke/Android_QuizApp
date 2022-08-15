@@ -3,6 +3,13 @@
     <string name="app_name">QuizApp</string>
     <string name="welcome_text">Welkom in de app</string>
     <string name="start_text">klik hier om te starten</string>
+
+    <string name="question">Wat is absoluut nodig voor deze app om te werken?</string>
+    <string name="correctAnswer">internetverbinding</string>
+    <string name="wrongAnswer1">een blok kaas</string>
+    <string name="wrongAnswer2">10 boeren</string>
+    <string name="wrongAnswer3">een emmer electriciteit</string>
+
     <string name="hello_blank_fragment">Hallo leeg fragment</string>
     <string name="messages_header">Berinchten</string>
     <string name="sync_header">synchroniseren</string>

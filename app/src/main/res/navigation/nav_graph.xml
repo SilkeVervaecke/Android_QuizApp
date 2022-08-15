@@ -36,7 +36,17 @@
             app:destination="@id/nav_test" />
         <action
             android:id="@+id/action_homeFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
+            app:destination="@id/questionFragment" >
+            <argument
+                android:name="questNumber"
+                android:defaultValue="1" />
+            <argument
+                android:name="Question"
+                android:defaultValue="Null" />
+        </action>
+        <argument
+            android:name="question"
+            app:argType="ehb.sv.classes.QuestnItem[]" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -48,8 +58,45 @@
         android:label="Question"
         tools:layout="@layout/fragment_question">
         <action
-            android:id="@+id/action_questionFragment_self"
+            android:id="@+id/action_questionFragment_to_questionCorrectFragment"
+            app:destination="@id/questionCorrectFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_questionFalseFragment"
+            app:destination="@id/questionFalseFragment" />
+        <argument
+            android:name="question"
+            app:argType="ehb.sv.classes.QuestnItem[]" />
+        <argument
+            android:name="questNumber"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionCorrectFragment"
+        android:name="ehb.sv.QuestionCorrectFragment"
+        android:label="fragment_question_correct"
+        tools:layout="@layout/fragment_question_correct" >
+        <action
+            android:id="@+id/action_questionCorrectFragment_to_questionFragment"
             app:destination="@id/questionFragment" />
+        <argument
+            android:name="questNumber"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFalseFragment"
+        android:name="ehb.sv.QuestionFalseFragment"
+        android:label="fragment_question_false"
+        tools:layout="@layout/fragment_question_false" >
+        <action
+            android:id="@+id/action_questionFalseFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="questNumber"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
 
 </navigation>

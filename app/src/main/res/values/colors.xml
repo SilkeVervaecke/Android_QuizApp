@@ -14,6 +14,9 @@
     <color name="pink4">#b95084</color>
     <color name="pink5">#971756</color>
 
+    <color name="red_wrong">#C4FF1010</color>
+    <color name="green_correct">#C439D610</color>
+
     <color name="soft_pink">#f396d0</color>
     <color name="soft_purple">#daade4</color>
     <color name="soft_green">#e6f7b0</color>

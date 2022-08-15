@@ -105,24 +105,28 @@ class QuestionFragment : Fragment() {
         binding.questionnumb.text = (number+1).toString()
         var quest = data[number]
         binding.textQuestion.text = quest.question
-        binding.answ1.text = quest.correctAnswer
-        binding.answ2.text = quest.incorrectAnswers[0]
-        binding.answ3.text = quest.incorrectAnswers[1]
-        binding.answ4.text = quest.incorrectAnswers[2]
-        binding.answ1
-        binding.answ1.setOnClickListener{
+
+        val buttons = arrayOf(binding.answ1, binding.answ2, binding.answ3, binding.answ4)
+
+        buttons.shuffle()
+        buttons[0].text = quest.correctAnswer
+        buttons[1].text = quest.incorrectAnswers[0]
+        buttons[2].text = quest.incorrectAnswers[1]
+        buttons[3].text = quest.incorrectAnswers[2]
+
+        buttons[0].setOnClickListener{
             val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionCorrectFragment(data, number)
             findNavController().navigate(action)
         }
-        binding.answ2.setOnClickListener{
+        buttons[1].setOnClickListener{
             val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data,number)
             findNavController().navigate(action)
         }
-        binding.answ3.setOnClickListener{
+        buttons[2].setOnClickListener{
             val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data, number)
             findNavController().navigate(action)
         }
-        binding.answ4.setOnClickListener{
+        buttons[3].setOnClickListener{
             val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data, number)
             findNavController().navigate(action)
         }

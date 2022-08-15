@@ -22,5 +22,6 @@
     <string name="correct">Juist</string>
     <string name="next_question">Volgende Vraag</string>
     <string name="wrong">Fout</string>
+    <string name="start_quiz">Start de quiz</string>
 
 </resources>

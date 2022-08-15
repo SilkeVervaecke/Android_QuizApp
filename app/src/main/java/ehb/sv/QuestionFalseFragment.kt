@@ -22,6 +22,8 @@ class QuestionFalseFragment : Fragment() {
         val data = args.question
         val number = args.questNumber
 
+        binding.questionnumb.text = (number+1).toString()
+
         binding.button.setOnClickListener {
             val action = QuestionFalseFragmentDirections.actionQuestionFalseFragmentToQuestionFragment(data,number+1)
             findNavController().navigate(action)

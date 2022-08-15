@@ -32,17 +32,18 @@ class QuestionFragment : Fragment() {
         val data = args.question
         val number = args.questNumber
         println(args.question)
-        for (qu in args.question){
-            println(qu)
-        }
-        println("** end **")
+//        for (qu in args.question){
+//            println(qu)
+//        }
+        println("** - **")
         if(data.size>0 && number<10){
-            println("data groter dan 10")
             bind(data, number)
         }
         else{
+            println("datasize: "+data.size+". number: "+number)
             fetchQuestions()
         }
+
 //        println(data.size.toString() + " data " + data)
 //        if (data.isEmpty()) {
 //            binding.textQuestion.text = getString(R.string.question)
@@ -101,7 +102,7 @@ class QuestionFragment : Fragment() {
 
     fun bind(data: Array<QuestnItem>, number: Int = 0){
         println(" -- we are binding -- ")
-
+        binding.questionnumb.text = (number+1).toString()
         var quest = data[number]
         binding.textQuestion.text = quest.question
         binding.answ1.text = quest.correctAnswer
@@ -114,7 +115,7 @@ class QuestionFragment : Fragment() {
             findNavController().navigate(action)
         }
         binding.answ2.setOnClickListener{
-            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data,number )
+            val action = QuestionFragmentDirections.actionQuestionFragmentToQuestionFalseFragment(data,number)
             findNavController().navigate(action)
         }
         binding.answ3.setOnClickListener{

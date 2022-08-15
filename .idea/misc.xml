@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/drawable/pink_button.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/drawable/question_button.xml" value="0.2703125" />
+        <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout-land/fragment_question.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout-land/fragment_question_correct.xml" value="0.13756613756613756" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout-port/home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/activity_question.xml" value="0.25" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_home.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_question.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_question_correct.xml" value="0.2" />
-        <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_question_false.xml" value="0.2" />
+        <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_question_false.xml" value="0.264" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_test.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/fragment_test_list.xml" value="0.25181159420289856" />
         <entry key="..\:/Users/Silke/Documents/EHB3/androidDevelopment/WERKSTUK/APP/quizapp/app/src/main/res/layout/question.xml" value="0.264" />

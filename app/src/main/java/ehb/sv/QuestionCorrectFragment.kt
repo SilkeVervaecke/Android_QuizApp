@@ -23,6 +23,8 @@ class QuestionCorrectFragment : Fragment() {
         val data = args.question
         val number = args.questNumber
 
+        binding.questionnumb.text = (number+1).toString()
+
         binding.button.setOnClickListener {
             val action = QuestionCorrectFragmentDirections.actionQuestionCorrectFragmentToQuestionFragment(data, number+1)
             findNavController().navigate(action)

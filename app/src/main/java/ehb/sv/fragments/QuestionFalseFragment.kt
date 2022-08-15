@@ -23,6 +23,7 @@ class QuestionFalseFragment : Fragment() {
         val number = args.questNumber
 
         binding.questionnumb.text = (number+1).toString()
+        binding.correctAnswer.text = data[number].correctAnswer
 
         binding.button.setOnClickListener {
             val action = QuestionFalseFragmentDirections.actionQuestionFalseFragmentToQuestionFragment(data,number+1)

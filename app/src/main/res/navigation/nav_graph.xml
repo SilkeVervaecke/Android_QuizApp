@@ -73,11 +73,11 @@
     <fragment
         android:id="@+id/questionCorrectFragment"
         android:name="ehb.sv.fragments.QuestionCorrectFragment"
-        android:label="fragment_question_correct"
-        tools:layout="@layout/fragment_question_correct" >
+        android:label="@string/correct"
+        tools:layout="@layout/fragment_question_correct">
         <action
             android:id="@+id/action_questionCorrectFragment_to_questionFragment"
-            app:destination="@id/questionFragment" >
+            app:destination="@id/questionFragment">
             <argument
                 android:name="questNumber"
                 android:defaultValue="1" />
@@ -87,14 +87,14 @@
             app:argType="ehb.sv.classes.QuestnItem[]" />
         <argument
             android:name="questNumber"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/questionFalseFragment"
         android:name="ehb.sv.fragments.QuestionFalseFragment"
-        android:label="fragment_question_false"
-        tools:layout="@layout/fragment_question_false" >
+        android:label="@string/wrong"
+        tools:layout="@layout/fragment_question_false">
         <action
             android:id="@+id/action_questionFalseFragment_to_questionFragment"
             app:destination="@id/questionFragment"
@@ -104,8 +104,8 @@
             app:argType="ehb.sv.classes.QuestnItem[]" />
         <argument
             android:name="questNumber"
-            app:argType="integer"
-            android:defaultValue="1" />
+            android:defaultValue="1"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

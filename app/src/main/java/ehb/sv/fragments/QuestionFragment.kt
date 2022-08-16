@@ -10,19 +10,17 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import ehb.sv.classes.QuestnItem
 import ehb.sv.data.QuestRetriever
+import ehb.sv.data.UserDatabase
 import ehb.sv.databinding.FragmentQuestionBinding
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class QuestionFragment : Fragment() {
     private lateinit var binding: FragmentQuestionBinding
-//    lateinit var job: Job
-
+//    val database by lazy { UserDatabase.getDatabase(this) }
     private val args : QuestionFragmentArgs by navArgs()
-//    private val args by navArgs<QuestionFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +30,6 @@ class QuestionFragment : Fragment() {
         val data = args.question
         val number = args.questNumber
         println(args.question)
-//        for (qu in args.question){
-//            println(qu)
-//        }
         println("** - **")
         if(data.size>0 && number<10){
             bind(data, number)
@@ -43,62 +38,8 @@ class QuestionFragment : Fragment() {
             println("datasize: "+data.size+". number: "+number)
             fetchQuestions()
         }
-
-//        println(data.size.toString() + " data " + data)
-//        if (data.isEmpty()) {
-//            binding.textQuestion.text = getString(R.string.question)
-//            binding.answ1.text = getString(R.string.correctAnswer)
-//            binding.answ2.text = getString(R.string.wrongAnswer1)
-//            binding.answ3.text = getString(R.string.wrongAnswer2)
-//            binding.answ4.text = getString(R.string.wrongAnswer3)
-//            fetchQuestions()
-//        }
-//        else {
-//            bind(data.toList())
-//            var quest = data[0]
-//            binding.textQuestion.text = quest.question
-//            binding.answ1.text = quest.correctAnswer
-//            binding.answ2.text = quest.incorrectAnswers[0]
-//            binding.answ3.text = quest.incorrectAnswers[1]
-//            binding.answ4.text = quest.incorrectAnswers[2]
-//        }
-// /       datajob()
-
-
-
-
         return binding.root
     }
-
-//    fun datajob() = runBlocking {
-//        var job = launch {
-//            println("main runBlocking      : I'm working in thread ${Thread.currentThread().name}")
-//
-//            var data  = getQuestData_suspend()
-//            if (data != null) {
-//                bind(data)
-//            } else{
-//                println("data is null")
-//            }
-//            println("in the job: "+questiondata)
-//            if (questiondata.size==0){
-//                println("size is zero")
-//            }else{
-//                questiondata[0]
-//            }
-//        }
-//        job.join()
-//        println("job is done?!?")
-//        if (questiondata.size==0){
-//            println("size is zero")
-//        }else{
-//            questiondata[0]
-//        }
-//        println("job completed?: "+job.isCompleted)
-//        println("job active?: "+job.isActive)
-//        println("job cancelled?: "+job.isCancelled)
-//
-//    }
 
     fun bind(data: Array<QuestnItem>, number: Int = 0){
         println(" -- we are binding -- ")
@@ -163,11 +104,6 @@ class QuestionFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-//        for (answ in question.incorrectAnswers){
-//            binding.
-//        }
-
 
     }
 

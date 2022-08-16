@@ -33,12 +33,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/pink_button"
+        android:background="@drawable/blue_button"
+        android:padding="10dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="15dp"
         android:text="@string/next_question"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,8 +56,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Correct Answer:"
+        android:text="@string/correct_answer"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

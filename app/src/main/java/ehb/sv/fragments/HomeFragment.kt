@@ -69,6 +69,9 @@ class HomeFragment : Fragment() {
 //        binding.btnstart.isEnabled = this::questiondata.isInitialized
         binding.btnstart.isEnabled = true
 
+    binding.button2.setOnClickListener {
+        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToUserActivity())
+    }
         binding.btnstart.setOnClickListener{
 //            var data = fetchQuestions()
             questiondata = emptyArray()

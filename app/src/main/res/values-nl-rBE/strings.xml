@@ -23,5 +23,7 @@
     <string name="next_question">Volgende Vraag</string>
     <string name="wrong">Fout</string>
     <string name="start_quiz">Start de quiz</string>
+    <string name="save_name">Sla naam op</string>
+    <string name="correct_answer">Juist Antwoord:</string>
 
 </resources>

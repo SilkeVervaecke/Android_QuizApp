@@ -34,13 +34,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/soft_green"
-        android:backgroundTint="@color/soft_green"
+        android:background="@drawable/blue_button"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:text="@string/next_question"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

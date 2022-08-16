@@ -38,6 +38,9 @@
         <argument
             android:name="question"
             app:argType="ehb.sv.classes.QuestnItem[]" />
+        <action
+            android:id="@+id/action_homeFragment_to_userActivity"
+            app:destination="@id/userActivity" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -107,5 +110,10 @@
             android:defaultValue="1"
             app:argType="integer" />
     </fragment>
+    <activity
+        android:id="@+id/userActivity"
+        android:name="ehb.sv.UserActivity"
+        android:label="activity_user"
+        tools:layout="@layout/activity_user" />
 
 </navigation>
